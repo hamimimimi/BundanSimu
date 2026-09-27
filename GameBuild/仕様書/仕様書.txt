@@ -1,0 +1,17 @@
+仕様書
+
+・CountryConstant：ゲーム開始時にGeneratorによって決まる定数。（人口、政治システム、国の大きさ、他国の存在等）
+・CountryVariable：すべてに議論レベル・議論ポイント・Yes,No,Neutralを持つ。MyAccのPostにより影響を受ける
+・MyAcc（自分のアカウント）：名前とTagを付けて作成する。すべてにRiskLebel（危険度）InfluencePoint（影響力）、CreditRatio（信用率）を持つ。
+
+　・影響力（0～）：投稿するごとに確率で増減する。Post時にCountryVariableの数値に影響を与える
+　・危険度（0～100）：上がることでデメリットを得る。投稿時のTagKeyのCountryVariableのYesNoが少ない方であればあるほど上昇する。
+　・信用率（0～200、初期値100）：過去のPostのYesNoと違うほど減り、同じほど増える。
+・OtherAcc（他人のアカウント）：ほかのアカウント、名前と所属を持つ。
+・District（選挙区、地域）：CountryConstantから生成される。村、町を合計5つ持ち、無人を任意の数持つ。首長をもち、50ターンごとに選挙を行う。ただしゲーム開始時には20～50
+・DebateTree（Tag解放）：UnlockButtonの置き場所。押すことでTagを開放する。
+
+　・UnlockButton：すべてにRequirePointを持つ。選択し、ターンを終える際にInformationPoint分ポイントを加えRequirePointを超えると押すことができる。
+・Election（選挙）：各選挙区ごとに行うものと、全体として行われるものがある。
+・：
+・：
